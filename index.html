@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Amirreza | Artist</title>
+  <link href="https://fonts.googleapis.com/css2?family=Syncopate:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="CSS/style.css">
+</head>
+<body>
+
+  <div class="video-background">
+    <video id="heroVideo" autoplay muted loop playsinline>
+      <source src="assets/loop.mp4" type="video/mp4">
+    </video>
+    <div class="video-overlay"></div>
+  </div>
+
+  <canvas id="dotCanvas"></canvas>
+
+  <div id="lightbox" class="lightbox" onclick="closeLightbox(event)">
+    <span class="close-btn" onclick="closeLightbox(event)">×</span>
+    <div class="lightbox-content glass-card-lite">
+      <img id="lightbox-img" src="" alt="">
+      <div class="lightbox-info">
+        <h3 id="lightbox-title"></h3>
+        <p id="lightbox-desc"></p>
+      </div>
+    </div>
+  </div>
+
+  <nav class="main-nav">
+    <div class="nav-links">
+      <a class="nav-item active" data-tab="home">Home</a>
+      <a class="nav-item" data-tab="about">About</a>
+      <a class="nav-item" data-tab="portfolio">Portfolio</a>
+      <a class="nav-item" data-tab="contact">Contact</a>
+    </div>
+  </nav>
+
+  <main id="main-container">
+
+    <section id="home" class="panel active-panel">
+      <div class="hero-text">
+        <h1>AMIRREZA</h1>
+        <p class="hero-name">Your Full Name</p>
+        <p class="hero-subtitle">Painter &amp; Illustrator</p>
+      </div>
+    </section>
+
+    <section id="about" class="panel">
+      <div class="glass-card content-scroll">
+        <div class="text-block">
+          <h2>About</h2>
+          <p>Write a short introduction here: who Amirreza is, where he works, and what he makes.</p>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="text-block">
+          <h2>Artist Statement</h2>
+          <p>Write two or three sentences about the ideas behind the work and the materials he uses.</p>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="text-block">
+          <h2>Process</h2>
+          <p>Describe how a piece begins and how it develops, from first sketch to finished work.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="portfolio" class="panel">
+      <div class="portfolio-bar glass-bar">
+        <button data-filter="all" class="active-filter">All</button>
+        <button data-filter="painting">Painting</button>
+        <button data-filter="illustration">Illustration</button>
+      </div>
+      <div id="stage" class="stage"></div>
+    </section>
+
+    <section id="contact" class="panel">
+      <div class="glass-card contact-card">
+        <div class="text-block">
+          <h2>Contact</h2>
+          <p>For commissions, exhibitions or questions, get in touch.</p>
+        </div>
+        <ul class="contact-list">
+          <li><span>Email</span><a href="mailto:name@example.com">name@example.com</a></li>
+          <li><span>Instagram</span><a href="https://instagram.com/yourhandle" target="_blank" rel="noopener">@yourhandle</a></li>
+          <li><span>Location</span><b>City, Country</b></li>
+        </ul>
+      </div>
+    </section>
+
+  </main>
+
+  <script src="JS/main.js"></script>
+</body>
+</html>
